@@ -1,0 +1,228 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+/* * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+}
+
+body {
+    -webkit-touch-callout: none;               
+    -webkit-text-size-adjust: none;            
+    -webkit-user-select: none;
+    background-color:#da1b22;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+} */
+
+/* Portrait layout (default) */
+.app {
+	background: url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+	position: absolute; /* position in the center of the screen */
+	left: 50%;
+	top: 50%;
+	height: 50px; /* text area height */
+	width: 225px; /* text area width */
+	text-align: center;
+	padding: 180px 0px 0px 0px; /* image height is 200px (bottom 20px are overlapped with text) */
+	margin: -115px 0px 0px -112px; /* offset vertical: half of image height and text area height */
+	/* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width: 400px) {
+	.app {
+		background-position: left center;
+		padding: 75px 0px 75px 170px; /* padding-top + padding-bottom + text area = image height */
+		margin: -90px 0px 0px -198px; /* offset vertical: half of image height */
+		/* offset horizontal: half of image width and text area width */
+	}
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0px;
+	overflow: visible;
+	padding: 0px;
+	text-align: center;
+}
+
+.event {
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	color: #ffffff;
+	font-size: 12px;
+	margin: 0px 30px;
+	padding: 2px 0px;
+}
+
+.event.listening {
+	background-color: #333333;
+	display: block;
+}
+
+.event.received {
+	background-color: #4b946a;
+	display: none;
+}
+
+@keyframes fade {
+	from {
+		opacity: 1.0;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1.0;
+	}
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 1.0;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1.0;
+	}
+}
+body {
+	background: #da1b22;
+}
+
+.blink {
+	animation: fade 3000ms infinite;
+	-webkit-animation: fade 3000ms infinite;
+}
+.macba-1 {
+	color: white;
+	font-size: 3rem;
+	font-family: 'Lato';
+}
+.macba-2 {
+	color: black;
+	font-size: 3rem;
+	font-family: 'Lato';
+}
+.macba-3 {
+	color: #f5a3b4fa;
+	font-size: 2.5rem;
+	font-family: 'Lato';
+	font-weight: bolder;
+}
+.caption {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+	margin-top: 8%;
+}
+.caption img {
+	width: 445px;
+	margin: auto;
+	max-height: 300px;
+}
+.principal {
+	margin-top: 6rem;
+}
+.btn-home {
+	border: 10px solid #be4b64fa !important;
+	border-radius: 15px !important;
+	color: #a70000 !important;
+	background-image: url('../img/pattern.png') !important;
+	padding: 20px 11px;
+	font-size: 22px;
+	font-weight: bolder;
+	letter-spacing: 3px;
+	width: 70%;
+	margin-top: 50px;
+}
+.btn-home:hover {
+	border: 10px solid pink !important;
+	background: #da1b22 !important;
+	color: white !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+	background-color: #da1b22 !important;
+}
+.btn-primary {
+	background-color: #da1b22;
+}
+.btn-primary:focus {
+	box-shadow: none !important;
+}
+.btn-primary:focus {
+	box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5) !important;
+}
+.main {
+	margin: auto;
+	width: 50%;
+}
+@media only screen and (max-width: 967px) {
+	.caption img {
+		width: 350px;
+	}
+	.macba-3 {
+		font-size: 2.2em;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.caption img {
+		width: 300px;
+		margin-top: 30px;
+	}
+	.btn-home {
+		padding: 10px 0;
+	}
+	.macba-3 {
+		font-size: 1.8em;
+	}
+}
+@media only screen and (max-width: 515px) {
+	.caption img {
+		width: 100%;
+		margin-top: 50%;
+	}
+	.btn-home {
+		padding: 5px 0;
+	}
+	.macba-3 {
+		font-size: 1.5em;
+	}
+}

@@ -1,0 +1,114 @@
+html,
+body {
+	/* background: rgb(194, 42, 47); */
+	background-image: url('../img/patternSala.png');
+	font-family: 'Lato';
+}
+.macba-1 {
+	color: white;
+	font-size: 3rem;
+	font-family: 'Lato';
+}
+.macba-2 {
+	color: black;
+	font-size: 3rem;
+	font-family: 'Lato';
+}
+.macba-3 {
+	color: black;
+	font-size: 1rem;
+	font-family: 'Lato';
+}
+.caption {
+	margin: auto;
+	width: 70%;
+}
+.principal {
+	margin-top: 6rem;
+}
+.header {
+	text-align: center;
+	text-transform: upper;
+	margin-top: 1.5rem;
+	margin-bottom: 2rem;
+}
+h2 {
+	font-size: 3rem;
+	color: #fcb7bc;
+	font-weight: bolder;
+	letter-spacing: 1.5px;
+	margin-top: 1%;
+}
+.btn-home {
+	border: 10px solid #c75154 !important;
+	background: #ff8b92 !important;
+	color: #a70000 !important;
+	font-weight: 900;
+	font-size: 40px;
+	padding: 5px 70px;
+	letter-spacing: 2px;
+	border-radius: 20px;
+	margin-top: 10px;
+}
+
+.btn-home:hover {
+	border: 10px solid #c75154 !important;
+	background: #a70000 !important;
+	color: #ff8991 !important;
+}
+.sala {
+	margin-bottom: 30px;
+}
+.gap {
+	width: 80%;
+	margin: auto;
+}
+.btn-sala {
+	border-radius: 50%;
+	font-weight: bolder;
+	font-size: 50px;
+	padding: 36px 55px;
+	box-shadow: 15px 20px rgba(253, 250, 250, 0.33);
+}
+.btn-sala:hover {
+	border: 10px solid #c75154 !important;
+	background: #a70000 !important;
+	color: #ff8991 !important;
+	box-shadow: 10px 15px rgba(253, 250, 250, 0.33);
+}
+@media only screen and (max-width: 835px) {
+	.btn-sala {
+		font-size: 35px;
+		padding: 30px 42px;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	.btn-home {
+		font-size: 30px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.btn-sala {
+		font-size: 25px;
+		padding: 22px 30px;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	.btn-home {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 475px) {
+	.btn-sala {
+		font-size: 20px;
+		padding: 15px 20px;
+	}
+	h2 {
+		font-size: 1.3rem;
+	}
+	.btn-home {
+		font-size: 15px;
+	}
+}
